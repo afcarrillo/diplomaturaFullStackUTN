@@ -1,3 +1,5 @@
 pan
 manzanas
 tomates
+lechuga
+naranjas
