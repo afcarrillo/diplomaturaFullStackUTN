@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario CV</title>
+</head>
+<body>
+    <h2>Contacto</h2>
+    <form>
+        <div>
+            <label>Nombre</label>
+            <input type="text" placeholder="Tu nombre">
+        </div>
+
+        <div>
+            <label>Teléfono</label>
+            <input type="tel" placeholder="Tu telefono">
+        </div>
+
+        <div>
+            <label>Correo</label>
+            <input type="email" placeholder="Tu email">
+        </div>
+
+        <div>
+            <label for="sexo">Sexo</label>
+            <ul>
+                <li style="list-style-type: none;">
+                    <input type="radio" name="sexo">
+                    <label>Masculino</label>
+                </li>
+                <li style="list-style-type: none;">
+                    <input type="radio" name="sexo">
+                    <label>Femenino</label>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <label for="motivo">Motivo contacto</label>
+            <select name="motivo">
+                <option>Motivo 1</option>
+                <option>Motivo 2</option>
+                <option>Motivo 3</option>
+                <option>Motivo 4</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Mensaje</label>
+            <textarea></textarea>
+        </div>
+        
+        <div>
+            <input type="submit" vale="Enviar">
+            <input type="reset" vale="Borrar">
+        </div>
+    </form>
+    <h4><a href="cv.html">Volver a CV</a></h4>
+</body>
+</html>
