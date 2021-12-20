@@ -1,0 +1,108 @@
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-size: 16px; /* 1rem = 10px */
+    background-color: wheat;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.8rem;
+    background-color:lightsalmon;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.contacto {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+p {
+    margin-left: 2rem;
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color:blue;
+}
+
+a:hover {
+    cursor: pointer;
+    color:orangered;
+}
+
+#imagenCV {
+    height: 10rem;
+    border: salmon;
+    border-style: solid;
+}
+
+.perfil {
+    padding: 2rem;
+    border-style:dotted;
+    border-color: salmon;
+    margin-bottom: 1rem;
+}
+
+ul li{
+    list-style-type: square;
+    margin-bottom: .5rem;
+}
+
+.lista-formulario li {
+    list-style-type: none;
+}
+
+ol li {
+    margin-bottom: .5rem;
+}
+ol li::marker {
+    font-weight: bold;
+}
+
+/* Formulario Contacto */
+div {
+    margin-bottom: 1rem;
+}
+label {
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+textarea {
+    height: 10rem;
+}
+
+input, select, textarea {
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+.boton {
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: .5rem;
+    border: none;
+}
+
+.boton:hover {
+    cursor: pointer;
+    background-color:cadetblue;
+}
