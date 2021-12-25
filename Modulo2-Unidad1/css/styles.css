@@ -1,6 +1,6 @@
 html {
     font-size: 62.5%; /* 1rem = 10px */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Comfortaa', cursive;
 }
 
 body {
@@ -12,6 +12,7 @@ h1 {
     text-align: center;
     font-size: 3.8rem;
     background-color:lightsalmon;
+    background: linear-gradient(to right, salmon, lightsalmon);
 }
 
 h2 {
@@ -47,13 +48,19 @@ a:hover {
     height: 10rem;
     border: salmon;
     border-style: solid;
+    box-shadow: .5rem .5rem .5rem black;
 }
 
 .perfil {
+    box-sizing: border-box;
     padding: 2rem;
     border-style:dotted;
     border-color: salmon;
     margin-bottom: 1rem;
+}
+
+.columnas {
+    column-count: 2;
 }
 
 ul li{
