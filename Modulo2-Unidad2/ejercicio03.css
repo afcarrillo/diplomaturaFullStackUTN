@@ -1,0 +1,34 @@
+body {
+    margin: 5px 5px; 
+}
+.contenedor {
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    height: 100px;
+    width: 100px;
+    border: 1px;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-style: solid;
+    border-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: blue;
+}
+
+.item:first-child {
+    background-color: red;
+}
+
+.item:last-child {
+    background-color: green;
+}
+
