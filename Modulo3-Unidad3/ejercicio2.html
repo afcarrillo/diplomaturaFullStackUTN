@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+</head>
+
+<body>
+	<script>
+        var numeros = [12, 25, 72, -34, 5, 99, 19, -40, 10];
+        var mayor = 0;
+
+        document.write("Array de números: [ ")
+
+        for (var i=0; i<numeros.length; i++) {
+            document.write(numeros[i] + " ");
+            if (numeros[i] > mayor) mayor = numeros[i];
+        }
+
+        document.write("]<br>El mayor número es " + mayor + "<br><br>");
+
+        numeros = [12, 72, 34, 5, 99, 19, 120];
+        mayor = 0;
+
+        document.write("Array de números: [ ")
+
+        for (var i=0; i<numeros.length; i++) {
+            document.write(numeros[i] + " ");
+            if (numeros[i] > mayor) mayor = numeros[i];
+        }
+
+        document.write("]<br>El mayor número es " + mayor + "<br><br>");
+
+        numeros = [72, 34, 5, 59, 19];
+        mayor = 0;
+
+        document.write("Array de números: [ ")
+
+        for (var i=0; i<numeros.length; i++) {
+            document.write(numeros[i] + " ");
+            if (numeros[i] > mayor) mayor = numeros[i];
+        }
+
+        document.write("]<br>El mayor número es " + mayor + "<br><br>");
+
+        numeros = [-72, -34, -5, -59, -19];
+        mayor = numeros[0];
+
+        document.write("Array de números: [ ")
+
+        for (var i=0; i<numeros.length; i++) {
+            document.write(numeros[i] + " ");
+            if (numeros[i] > mayor) mayor = numeros[i];
+        }
+
+        document.write("]<br>El mayor número es " + mayor);
+
+
+    </script>
+
+</body>
+</html>
