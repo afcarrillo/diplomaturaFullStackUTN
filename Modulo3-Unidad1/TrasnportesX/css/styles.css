@@ -1,0 +1,225 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+h2 {
+    color: #2e64a1;
+    font-weight: 400;
+    margin: 0 0 1em;
+}
+
+header {
+    background-color: #2e64a1;
+    padding: 1em 0;
+}
+
+header h1 {
+    color: white;
+    font-size: 2.5em;
+    font-style: italic;
+    font-weight: 100;
+    display: inline-block;
+    position: relative;
+    bottom: 30px;
+}
+
+nav {
+    background-color: #6da9ed;
+    margin-bottom: 2em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    width: 16.3%;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 0.2em 0.4em;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    background-color: #ccc;
+    clear: both;
+    color: #333;
+    padding: 3em 0;
+    margin-top: 2em;
+    text-align: center;
+}
+
+nav ul li a.activo {
+    background-color: #4c76a5;
+}
+
+.holder {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+/* HOME */
+.homeimg {
+    margin-bottom: 1.5em;
+}
+
+.columnas {
+    overflow: hidden;
+}
+
+.bienvenidos, .testimonios {
+    box-sizing: border-box;
+}
+
+.bienvenidos {
+    width: 75%;
+    padding-right: 2em;
+}
+
+.testimonios {
+    width: 25%;
+}
+
+.testimonio {
+    background-color: #ccc;
+    padding: 1em;
+}
+
+.testimonio .cita {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.4em;
+    display: block;
+}
+
+.testimonio .autor {
+    font-size: 0.7em;
+    text-align: center;
+    margin: 1em 0;
+    display: block;
+}
+/* FIN HOME */
+
+/* NOSOTROS */
+.historia p {
+    font-size: 0.8em;
+}
+
+.personas {
+    overflow: hidden;
+}
+
+.persona {
+    border: 1px solid grey;
+    border-radius: 0.25em;
+    float: left;
+    margin-left: 2.5%;
+    box-sizing: border-box;
+    width: 18%;
+    text-align: center;
+}
+
+.persona img {
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin: 0.8em 0.1em;
+    max-width: 70%;
+}
+
+.persona h5, .persona h6 {
+    font-weight: normal;
+    color: #2e64a1;
+    margin: 0;
+}
+
+.persona h5 {
+    font-size: 0.9em;
+}
+
+.persona h6 {
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.persona p {
+    text-align: justify;
+    font-size: 0.7em;
+    color: #444;
+    margin: 0 1em 1em;
+}
+
+.persona:first-child {
+    margin-left: 0;
+}
+/* FIN NOSOTROS */
+
+/* SERVICIOS */
+.servicio {
+    border: 1px solid gray;
+    border-radius: 0.7em;
+    margin: 1em 0;
+    padding: 1em;
+    overflow: hidden;
+}
+
+.servicio .info {
+    width: 75%;
+}
+
+.servicio .info h4 {
+    color: #2e64a1;
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 500;
+    margin: 0 0 1em;
+    border-bottom: 1px solid #2e64a1;
+    padding-bottom: 0.5em;
+}
+
+.servicio .info p {
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
+
+.servicio img {
+    border-radius: 0.8em;
+}
+
+.servicio:nth-child(even) img { /* par */
+    float: right;
+    margin: 0 0 0 1em;
+}
+
+.servicio:nth-child(odd) img { /* impar */
+    float: left;
+    margin: 0 1em 0 0;
+}
+
+.servicio:nth-child(even) .info {
+    float: left;
+}
+
+.servicio:nth-child(odd) .info {
+    float: right;
+}
