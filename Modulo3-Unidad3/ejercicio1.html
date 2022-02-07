@@ -8,22 +8,25 @@
 <body>
 	<script>
 	var distancia = 0;
+    var transporte;
     
     while (distancia <=0) {
         distancia=prompt('Ingrese la distancia a recorrer (recuerde que sea mayor que 0):','');
     }
 	
     if (distancia > 0 && distancia <= 1000) {
-        document.write("Para una distancia de " + distancia + "m, se recomienda ir a pie");
+        transporte = "pie";
     } else if (distancia > 1000 && distancia <= 10000) {
-        document.write("Para una distancia de " + distancia + "m, se recomienda ir en bicicleta");  
+        transporte = "bicicleta";  
     } else if (distancia > 10000 && distancia <= 30000) {
-        document.write("Para una distancia de " + distancia + "m, se recomienda ir en colectivo");  
+        transporte = "colectivo";  
     } else if (distancia > 30000 && distancia <= 100000) {
-        document.write("Para una distancia de " + distancia + "m, se recomienda ir en auto");  
+        transporte = "auto";  
     } else {
-        document.write("Para una distancia de " + distancia + "m, se recomienda ir en avión");  
+        transporte = "avión";  
     }
+
+    document.write("Para una distancia de " + distancia + "m, se recomienda ir en " + transporte);
     
     </script>
 
