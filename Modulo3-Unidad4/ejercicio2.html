@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<style>
+	p { 
+		margin: 4px 0px;
+	}
+	button {
+		padding: 5px;
+	}
+</style>
+</head>
+
+<body>
+	<p>
+		<label for="mensaje">Escribe tu mensaje:</label>
+	</p>
+	<textarea name="mensaje" cols="30" rows="10"></textarea>
+	<p>
+		<button id="contador">Contar caracteres</button>
+	</p>
+
+	<script>
+	// contador de caracteres para un textarea
+	var texto = document.getElementsByTagName("textarea");
+	var contar = document.getElementById("contador");
+	var Num_caracteres = 0;
+
+	contar.addEventListener("click", function() {
+		num_caracteres = texto[0].textLength;
+		console.log(`El texto contiene ${num_caracteres} caracteres`);
+		alert(`El texto contiene ${num_caracteres} caracteres`);
+	});    
+    </script>
+
+</body>
+</html>

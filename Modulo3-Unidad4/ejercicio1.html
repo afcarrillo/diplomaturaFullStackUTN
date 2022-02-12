@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejercicio 1</title>
+<link rel="stylesheet" href="ejercicio1.css">
+</head>
+
+<body>
+    <div class="paleta">
+        <p id="color1">
+            
+        </p>
+        <p id="color2">
+            
+        </p>
+        <p id="color3">
+            
+        </p>
+    </div>
+
+	<script>
+	var cajas = document.querySelectorAll('p');
+    var colores = [];
+
+    for (i=0; i<cajas.length; i++){
+        colores[i] = window.getComputedStyle(cajas[i]).backgroundColor;   
+    }
+
+    cajas[0].addEventListener('click', function(){
+        document.body.style.backgroundColor = colores[0];
+    });
+    cajas[1].addEventListener('click', function(){
+        document.body.style.backgroundColor = colores[1];
+    });
+    cajas[2].addEventListener('click', function(){
+        document.body.style.backgroundColor = colores[2];
+    });
+
+    
+    
+    
+    </script>
+
+</body>
+</html>
