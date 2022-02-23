@@ -1,0 +1,49 @@
+.servicio {
+    border: 1px solid gray;
+    border-radius: 0.7em;
+    margin: 1em 0;
+    padding: 1em;
+    overflow: hidden;
+}
+
+.servicio .info {
+    width: 75%;
+}
+
+.servicio .info h4 {
+    color: #2e64a1;
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 500;
+    margin: 0 0 1em;
+    border-bottom: 1px solid #2e64a1;
+    padding-bottom: 0.5em;
+}
+
+.servicio .info p {
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
+
+.servicio img {
+    border-radius: 0.8em;
+    width: 20%;
+}
+
+.servicio:nth-child(even) img { /* par */
+    float: right;
+    margin: 0 0 0 1em;
+}
+
+.servicio:nth-child(odd) img { /* impar */
+    float: left;
+    margin: 0 1em 0 0;
+}
+
+.servicio:nth-child(even) .info {
+    float: left;
+}
+
+.servicio:nth-child(odd) .info {
+    float: right;
+}
