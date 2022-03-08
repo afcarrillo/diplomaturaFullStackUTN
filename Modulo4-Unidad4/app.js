@@ -25,14 +25,16 @@ app.use(session({
     saveUninitialized: true
 }))
 
-var num1, num2, suma;
-num1 = Math.floor(Math.random()*10);
-num2 = Math.floor(Math.random()*10);
-suma = num1 + num2;
+var suma;
 
 app.get('/', function(req, res) {
+    var num1, num2;
     var conocido = req.session.nombre;
     var robot = (parseInt(req.session.suma) === suma);
+
+    num1 = Math.floor(Math.random()*10);
+    num2 = Math.floor(Math.random()*10);
+    suma = num1 + num2;
 
     res.render('index', {
         title: 'Sesiones en Express.js',
