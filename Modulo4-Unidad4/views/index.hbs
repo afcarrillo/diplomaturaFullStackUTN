@@ -1,0 +1,22 @@
+<h1>{{title}}</h1>
+{{#if conocido}}
+
+    {{#if robot}}
+    <p>Hola {{conocido}} <a href="/salir">Salir</a></p>
+    {{/if}}
+
+    {{#unless robot}}
+    <p>No soy un robot</p>
+    <form action="/robot" method="post">
+        <label for="suma">¿Cuánto suma {{num1}} + {{num2}}?</label>
+        <input type="number" name="suma"><button>OK</button>
+    </form>
+    {{/unless}}
+{{/if}}
+
+{{#unless conocido}}
+<p>No te conozco</p>
+<form action="/ingresar" method="post">
+    <input type="text" name="nombre"><button>Ingresar</button>
+</form>
+{{/unless}}
