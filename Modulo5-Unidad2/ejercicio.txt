@@ -1,0 +1,222 @@
+SELECT nombre, trabajo FROM empleados;
+
+nombre	trabajo	
+Juan	Programador Senior	
+Gonzalo	Programador Senior	
+Ana	Desarrollador Web	
+Maria	Desarrollador Web	
+Alfred	Programador	
+Juan	Programador	
+Eduardo	Programador	
+Alejandro	Programador	
+Hernan	Especialista Multimedia	
+Pablo	Especialista Multimedia	
+Arturo	Especialista Multimedia	
+Jimena	Diseñador Web	
+Roberto	Administrador de sistemas	
+Daniel	Administrador de sistemas	
+Miguel	Ejecutivo de Ventas Senior	
+Monica	Ejecutivo de ventas	
+Alicia	Ejecutivo de ventas	
+Jose	Ejecutivo de ventas	
+Sabrina	Gerente de Soporte tecnico	
+Pedro	Gerente de finanzas	
+Mariano	Presidente	
+
+
+SELECT nombre, edad FROM empleados;
+
+nombre	edad	
+Juan	32	
+Gonzalo	32	
+Ana	27	
+Maria	26	
+Alfred	31	
+Juan	36	
+Eduardo	25	
+Alejandro	32	
+Hernan	33	
+Pablo	43	
+Arturo	32	
+Jimena	32	
+Roberto	35	
+Daniel	34	
+Miguel	36	
+Monica	30	
+Alicia	27	
+Jose	27	
+Sabrina	32	
+Pedro	36	
+Mariano	28	
+
+
+SELECT nombre, edad FROM empleados WHERE trabajo LIKE '%programador%';
+
+nombre	edad	
+Juan	32	
+Gonzalo	32	
+Alfred	31	
+Juan	36	
+Eduardo	25	
+Alejandro	32	
+
+
+SELECT * FROM empleados WHERE edad > 30;
+
+id_emp	nombre	apellido	trabajo	edad	salario	mail	
+1	Juan	Hagan	Programador Senior	32	120000	juan_hagan@bignet.com	
+2	Gonzalo	Pillai	Programador Senior	32	110000	g_pillai@bignet.com	
+5	Alfred	Fernandez	Programador	31	75000	af@bignet.com	
+6	Juan	Agüero	Programador	36	85000	juan@bignet.com	
+8	Alejandro	Nanda	Programador	32	70000	alenanda@bignet.com	
+9	Hernan	Rosso	Especialista Multimedia	33	90000	hernan@bignet.com	
+10	Pablo	Simon	Especialista Multimedia	43	85000	ps@bignet.com	
+11	Arturo	Hernandez	Especialista Multimedia	32	75000	arturo@bignet.com	
+12	Jimena	Cazado	Diseñador Web	32	110000	jimena@bignet.com	
+13	Roberto	Luis	Administrador de sistemas	35	100000	roberto@bignet.com	
+14	Daniel	Gutierrez	Administrador de sistemas	34	900000	daniel@bignet.com	
+15	Miguel	Harper	Ejecutivo de Ventas Senior	36	120000	miguel@bignet.com	
+19	Sabrina	Allende	Gerente de Soporte tecnico	32	200000	sabrina@bignet.com	
+20	Pedro	Campeon	Gerente de finanzas	36	220000	pedro@bignet.com	
+
+
+SELECT apellido, mail FROM empleados WHERE nombre = 'Juan';
+
+apellido	mail	
+Hagan	juan_hagan@bignet.com	
+Agüero	juan@bignet.com	
+
+
+SELECT nombre FROM empleados WHERE trabajo = 'Programador' OR trabajo = 'Desarrollador Web';
+
+nombre	
+Ana	
+Maria	
+Alfred	
+Juan	
+Eduardo	
+Alejandro	
+
+
+SELECT id_emp, nombre, apellido, trabajo FROM empleados WHERE id_emp BETWEEN 15 AND 20;
+
+id_emp	nombre	apellido	trabajo	
+15	Miguel	Harper	Ejecutivo de Ventas Senior	
+16	Monica	Sanchez	Ejecutivo de ventas	
+17	Alicia	Simlai	Ejecutivo de ventas	
+18	Jose	Iriarte	Ejecutivo de ventas	
+19	Sabrina	Allende	Gerente de Soporte tecnico	
+20	Pedro	Campeon	Gerente de finanzas	
+
+
+SELECT * FROM empleados WHERE trabajo = 'Programador' AND salario < 80000;
+
+id_emp	nombre	apellido	trabajo	edad	salario	mail	
+5	Alfred	Fernandez	Programador	31	75000	af@bignet.com	
+8	Alejandro	Nanda	Programador	32	70000	alenanda@bignet.com	
+
+
+SELECT * FROM empleados WHERE trabajo = 'Programador' AND salario BETWEEN 75000 AND 90000;
+
+id_emp	nombre	apellido	trabajo	edad	salario	mail	
+5	Alfred	Fernandez	Programador	31	75000	af@bignet.com	
+6	Juan	Agüero	Programador	36	85000	juan@bignet.com	
+7	Eduardo	Sacan	Programador	25	85000	eddi@bignet.com	
+
+
+SELECT * FROM empleados WHERE apellido LIKE 's%';
+
+id_emp	nombre	apellido	trabajo	edad	salario	mail	
+7	Eduardo	Sacan	Programador	25	85000	eddi@bignet.com	
+10	Pablo	Simon	Especialista Multimedia	43	85000	ps@bignet.com	
+16	Monica	Sanchez	Ejecutivo de ventas	30	90000	monica@bignet.com	
+17	Alicia	Simlai	Ejecutivo de ventas	27	70000	alicia@bignet.com	
+
+
+SELECT * FROM empleados WHERE nombre LIKE '%l';
+
+id_emp	nombre	apellido	trabajo	edad	salario	mail	
+14	Daniel	Gutierrez	Administrador de sistemas	34	900000	daniel@bignet.com	
+15	Miguel	Harper	Ejecutivo de Ventas Senior	36	120000	miguel@bignet.com	
+
+
+INSERT INTO empleados VALUES (null, 'Francisco', 'Perez', 'Programador', 26, 90000, 'francisco@bignet.com')
+SELECT * FROM `empleados`;
+
+id_emp	nombre	apellido	trabajo	edad	salario	mail	
+1	Juan	Hagan	Programador Senior	32	120000	juan_hagan@bignet.com	
+2	Gonzalo	Pillai	Programador Senior	32	110000	g_pillai@bignet.com	
+3	Ana	Dharma	Desarrollador Web	27	90000	ana@bignet.com	
+4	Maria	Anchor	Desarrollador Web	26	85000	mary@bignet.com	
+5	Alfred	Fernandez	Programador	31	75000	af@bignet.com	
+6	Juan	Agüero	Programador	36	85000	juan@bignet.com	
+7	Eduardo	Sacan	Programador	25	85000	eddi@bignet.com	
+8	Alejandro	Nanda	Programador	32	70000	alenanda@bignet.com	
+9	Hernan	Rosso	Especialista Multimedia	33	90000	hernan@bignet.com	
+10	Pablo	Simon	Especialista Multimedia	43	85000	ps@bignet.com	
+11	Arturo	Hernandez	Especialista Multimedia	32	75000	arturo@bignet.com	
+12	Jimena	Cazado	Diseñador Web	32	110000	jimena@bignet.com	
+13	Roberto	Luis	Administrador de sistemas	35	100000	roberto@bignet.com	
+14	Daniel	Gutierrez	Administrador de sistemas	34	900000	daniel@bignet.com	
+15	Miguel	Harper	Ejecutivo de Ventas Senior	36	120000	miguel@bignet.com	
+16	Monica	Sanchez	Ejecutivo de ventas	30	90000	monica@bignet.com	
+17	Alicia	Simlai	Ejecutivo de ventas	27	70000	alicia@bignet.com	
+18	Jose	Iriarte	Ejecutivo de ventas	27	72000	jose@bignet.com	
+19	Sabrina	Allende	Gerente de Soporte tecnico	32	200000	sabrina@bignet.com	
+20	Pedro	Campeon	Gerente de finanzas	36	220000	pedro@bignet.com	
+21	Mariano	Dharma	Presidente	28	300000	mariano@bignet.com	
+22	Francisco	Perez	Programador	26	90000	francisco@bignet.com	
+
+
+DELETE FROM empleados WHERE nombre = 'Hernan' AND apellido = 'Rosso'
+SELECT * FROM `empleados`
+
+id_emp	nombre	apellido	trabajo	edad	salario	mail	
+1	Juan	Hagan	Programador Senior	32	120000	juan_hagan@bignet.com	
+2	Gonzalo	Pillai	Programador Senior	32	110000	g_pillai@bignet.com	
+3	Ana	Dharma	Desarrollador Web	27	90000	ana@bignet.com	
+4	Maria	Anchor	Desarrollador Web	26	85000	mary@bignet.com	
+5	Alfred	Fernandez	Programador	31	75000	af@bignet.com	
+6	Juan	Agüero	Programador	36	85000	juan@bignet.com	
+7	Eduardo	Sacan	Programador	25	85000	eddi@bignet.com	
+8	Alejandro	Nanda	Programador	32	70000	alenanda@bignet.com	
+10	Pablo	Simon	Especialista Multimedia	43	85000	ps@bignet.com	
+11	Arturo	Hernandez	Especialista Multimedia	32	75000	arturo@bignet.com	
+12	Jimena	Cazado	Diseñador Web	32	110000	jimena@bignet.com	
+13	Roberto	Luis	Administrador de sistemas	35	100000	roberto@bignet.com	
+14	Daniel	Gutierrez	Administrador de sistemas	34	900000	daniel@bignet.com	
+15	Miguel	Harper	Ejecutivo de Ventas Senior	36	120000	miguel@bignet.com	
+16	Monica	Sanchez	Ejecutivo de ventas	30	90000	monica@bignet.com	
+17	Alicia	Simlai	Ejecutivo de ventas	27	70000	alicia@bignet.com	
+18	Jose	Iriarte	Ejecutivo de ventas	27	72000	jose@bignet.com	
+19	Sabrina	Allende	Gerente de Soporte tecnico	32	200000	sabrina@bignet.com	
+20	Pedro	Campeon	Gerente de finanzas	36	220000	pedro@bignet.com	
+21	Mariano	Dharma	Presidente	28	300000	mariano@bignet.com	
+22	Francisco	Perez	Programador	26	90000	francisco@bignet.com	
+
+
+UPDATE empleados SET salario = 90000 WHERE nombre = 'Daniel' AND apellido = 'Gutierrez'
+SELECT * FROM `empleados`
+
+id_emp	nombre	apellido	trabajo	edad	salario	mail	
+1	Juan	Hagan	Programador Senior	32	120000	juan_hagan@bignet.com	
+2	Gonzalo	Pillai	Programador Senior	32	110000	g_pillai@bignet.com	
+3	Ana	Dharma	Desarrollador Web	27	90000	ana@bignet.com	
+4	Maria	Anchor	Desarrollador Web	26	85000	mary@bignet.com	
+5	Alfred	Fernandez	Programador	31	75000	af@bignet.com	
+6	Juan	Agüero	Programador	36	85000	juan@bignet.com	
+7	Eduardo	Sacan	Programador	25	85000	eddi@bignet.com	
+8	Alejandro	Nanda	Programador	32	70000	alenanda@bignet.com	
+10	Pablo	Simon	Especialista Multimedia	43	85000	ps@bignet.com	
+11	Arturo	Hernandez	Especialista Multimedia	32	75000	arturo@bignet.com	
+12	Jimena	Cazado	Diseñador Web	32	110000	jimena@bignet.com	
+13	Roberto	Luis	Administrador de sistemas	35	100000	roberto@bignet.com	
+14	Daniel	Gutierrez	Administrador de sistemas	34	90000	daniel@bignet.com	
+15	Miguel	Harper	Ejecutivo de Ventas Senior	36	120000	miguel@bignet.com	
+16	Monica	Sanchez	Ejecutivo de ventas	30	90000	monica@bignet.com	
+17	Alicia	Simlai	Ejecutivo de ventas	27	70000	alicia@bignet.com	
+18	Jose	Iriarte	Ejecutivo de ventas	27	72000	jose@bignet.com	
+19	Sabrina	Allende	Gerente de Soporte tecnico	32	200000	sabrina@bignet.com	
+20	Pedro	Campeon	Gerente de finanzas	36	220000	pedro@bignet.com	
+21	Mariano	Dharma	Presidente	28	300000	mariano@bignet.com	
+22	Francisco	Perez	Programador	26	90000	francisco@bignet.com	
