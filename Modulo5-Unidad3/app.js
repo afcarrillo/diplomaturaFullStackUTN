@@ -27,7 +27,6 @@ app.use('/users', usersRouter);
 // consultas a la base de datos
 
 var pool = require('./models/bd'); // bd.js
-const { isBigIntObject } = require('util/support/types');
 
 // select
 pool.query('select * from empleados').then(function (resultados) {
@@ -35,28 +34,28 @@ pool.query('select * from empleados').then(function (resultados) {
 });
 
 // insert
-// var obj = {
-//     nombre: 'Juan',
-//     apellido: 'López',
-//     trabajo: 'Desarrolador Web',
-//     edad: 43,
-//     salario: 115000,
-//     mail: 'juanlo@bignet.com'
-// }
+var obj = {
+    nombre: 'Juan',
+    apellido: 'López',
+    trabajo: 'Desarrolador Web',
+    edad: 43,
+    salario: 115000,
+    mail: 'juanlo@bignet.com'
+}
 
-// pool.query('insert into empleados set ?', [obj]).then(function (resultados) {
-//     console.log(resultados);
-// });
+pool.query('insert into empleados set ?', [obj]).then(function (resultados) {
+    console.log(resultados);
+});
 
 // update
-// var id = 1;
-// var obj = {
-//     salario: 135000
-// }
+var id = 1;
+var obj = {
+    salario: 135000
+}
 
-// pool.query('update empleados set ? where id_emp = ?', [obj, id]).then(function (resultados) {
-//     console.log(resultados);
-// });
+pool.query('update empleados set ? where id_emp = ?', [obj, id]).then(function (resultados) {
+    console.log(resultados);
+});
 
 // delete
 var id = 23;
