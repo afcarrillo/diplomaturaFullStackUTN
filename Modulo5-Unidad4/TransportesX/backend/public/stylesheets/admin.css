@@ -1,0 +1,22 @@
+header h1 {
+    position: static;
+}
+
+.container {
+    margin-bottom: 100px;
+    margin-top:100px;
+}
+
+.login input {
+    background-color:aliceblue;
+}
+
+.btn-primary {
+    background-color: #2e64a1;
+    border-color: #2e64a1;
+}
+
+.error {
+    margin-top: 10px;
+    color: red;
+}
