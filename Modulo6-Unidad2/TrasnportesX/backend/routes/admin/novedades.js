@@ -4,7 +4,7 @@ var novedadesModel = require('../../models/novedadesModel');
 
 // Seleccionar novedades 
 router.get('/', async function(req, res, next) {
-    var novedades = await novedadesModel.getNovedades();
+    var novedades = await novedadesModel.getNovedades(req.session.nombre);
     res.render('admin/novedades', {
         layout: 'admin/layout',
         usuario: req.session.nombre,
@@ -22,7 +22,13 @@ router.get('/agregar', function(req, res, next) {
 router.post('/agregar', async (req, res, next) => {
     try {
         if (req.body.titulo != "" & req.body.subtitulo != "" & req.body.cuerpo != "") {
-            await novedadesModel.insertNovedad(req.body);
+            var campos = {
+                titulo: req.body.titulo,
+                subtitulo: req.body.subtitulo,
+                cuerpo: req.body.cuerpo,
+                usuario: req.session.nombre
+            }
+            await novedadesModel.insertNovedad(campos);
             res.redirect('/admin/novedades');
         } else {
             res.render('admin/agregar', {
@@ -88,7 +94,7 @@ router.get('/eliminar/:id', async (req, res, next) => {
 });
 
 router.get('/papelera', async (req, res, next) => {
-    var novedadesEliminadas = await novedadesModel.getNovedadesDeleted();
+    var novedadesEliminadas = await novedadesModel.getNovedadesDeleted(req.session.nombre);
     res.render('admin/papelera', {
         layout: 'admin/layout',
         usuario: req.session.nombre,

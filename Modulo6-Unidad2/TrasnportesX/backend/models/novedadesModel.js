@@ -1,9 +1,16 @@
 var pool = require('./bd'); // lamando a la base de datos
 
-async function getNovedades () {
+async function getNovedades (user) {
     try {
-        var query = 'select * from novedades where activo = true order by id desc';
-        var rows = await pool.query(query);
+        var query;
+        var rows;
+        if (user == 'admin') {
+            query = 'select * from novedades where activo = true order by id desc';
+            rows = await pool.query(query);
+        } else {
+            query = 'select * from novedades where activo = true and usuario = ? order by id desc';
+            rows = await pool.query(query, [user]);
+        }
         return rows;
     } catch (error) {
         console.log(error);
@@ -22,10 +29,17 @@ async function getNovedadByID (id) {
     }
 }
 
-async function getNovedadesDeleted () {
+async function getNovedadesDeleted (user) {
     try {
-        var query = 'select * from novedades where activo = false order by id desc';
-        var rows = await pool.query(query);
+        var query;
+        var rows;
+        if (user == 'admin') {
+            query = 'select * from novedades where activo = false order by id desc';
+            rows = await pool.query(query);
+        } else {
+            query = 'select * from novedades where activo = false and usuario = ? order by id desc';
+            rows = await pool.query(query, [user]);
+        }
         return rows;
     } catch (error) {
         console.log(error);
@@ -33,10 +47,10 @@ async function getNovedadesDeleted () {
     }
 }
 
-async function insertNovedad (novedad) {
+async function insertNovedad (campos) {
     try {
         var query = 'insert into novedades set ?';
-        var rows = await pool.query(query, [novedad]);
+        var rows = await pool.query(query, [campos]);
         return rows;
     } catch (error) {
         console.log(error);
