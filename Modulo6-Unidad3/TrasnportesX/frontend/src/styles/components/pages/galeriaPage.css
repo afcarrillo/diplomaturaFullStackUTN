@@ -1,0 +1,18 @@
+.galeria .foto {
+    display: inline-block;
+    float: left;
+    width: 18%;
+    border: 1px solid #ddd;
+    margin: 1em 0 1em 2.5%;
+    padding: 0.3em;
+    box-sizing: border-box;
+}
+
+.galeria .foto img {
+    width: 100%;
+    display: block;
+}
+
+.galeria .foto:nth-child(5n+1){
+    margin-left: 0;
+}
